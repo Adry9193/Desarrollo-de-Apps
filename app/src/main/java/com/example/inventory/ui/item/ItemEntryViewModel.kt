@@ -55,7 +55,7 @@ class ItemEntryViewModel(private val itemsRepository: ItemsRepository) : ViewMod
 
     private fun validateInput(uiState: ItemDetails = itemUiState.itemDetails): Boolean {
         return with(uiState) {
-            name.isNotBlank() && price.isNotBlank() && quantity.isNotBlank()
+            nombre.isNotBlank() && autor.isNotBlank() && anio.isNotBlank()
         }
     }
 }
@@ -70,26 +70,26 @@ data class ItemUiState(
 
 data class ItemDetails(
     val id: Int = 0,
-    val name: String = "",
-    val price: String = "",
-    val quantity: String = "",
+    val nombre: String = "",
+    val autor: String = "",
+    val anio: String = "",
 )
 
 /**
- * Extension function to convert [ItemUiState] to [Item]. If the value of [ItemDetails.price] is
- * not a valid [Double], then the price will be set to 0.0. Similarly if the value of
+ * Extension function to convert [ItemUiState] to [Item]. If the value of [ItemDetails.autor] is
+ * not a valid [Double], then the autor will be set to 0.0. Similarly if the value of
  * [ItemUiState] is not a valid [Int], then the quantity will be set to 0
  */
 fun ItemDetails.toItem(): Item = Item(
     id = id,
-    name = name,
-    price = price.toDoubleOrNull() ?: 0.0,
-    quantity = quantity.toIntOrNull() ?: 0
+    nombre = nombre,
+    autor = autor,
+    anio = anio.toIntOrNull() ?: 0
 )
 
-fun Item.formatedPrice(): String {
-    return NumberFormat.getCurrencyInstance().format(price)
-}
+/*fun Item.formatedPrice(): String {
+    return NumberFormat.getCurrencyInstance().format(6)
+}*/
 
 /**
  * Extension function to convert [Item] to [ItemUiState]
@@ -104,7 +104,7 @@ fun Item.toItemUiState(isEntryValid: Boolean = false): ItemUiState = ItemUiState
  */
 fun Item.toItemDetails(): ItemDetails = ItemDetails(
     id = id,
-    name = name,
-    price = price.toString(),
-    quantity = quantity.toString()
+    nombre = nombre,
+    autor = autor,
+    anio = anio.toString()
 )

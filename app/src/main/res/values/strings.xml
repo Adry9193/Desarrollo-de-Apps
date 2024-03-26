@@ -14,25 +14,25 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="app_name">Inventory</string>
-    <string name="attention">Attention</string>
-    <string name="back_button">Back</string>
-    <string name="delete">Delete</string>
-    <string name="delete_question">Are you sure you want to delete?</string>
-    <string name="no_item_description">Oops!\nNo items in the inventory.\nTap + to add.</string>
-    <string name="edit_item_title">Edit Item</string>
-    <string name="item">Item</string>
-    <string name="item_detail_title">Item Details</string>
-    <string name="item_entry_title">Add Item</string>
-    <string name="item_name_req">Item Name*</string>
-    <string name="item_price_req">Item Price*</string>
+    <string name="app_name">App Libros</string>
+    <string name="attention">Atención</string>
+    <string name="back_button">Volver</string>
+    <string name="delete">Eliminar</string>
+    <string name="delete_question">Estás segurod de Eliminar?</string>
+    <string name="no_item_description">Oops!\nNo hay libros.\nPresione + para agregar.</string>
+    <string name="edit_item_title">Editar Libro</string>
+    <string name="item">Libro</string>
+    <string name="item_detail_title">Detalles Libro</string>
+    <string name="item_entry_title">Agregar Libro</string>
+    <string name="item_nombre_req">Nombre Libro*</string>
+    <string name="item_autor_req">Autor*</string>
     <string name="no">No</string>
-    <string name="price">Price</string>
-    <string name="quantity_in_stock">Quantity in stock</string>
-    <string name="in_stock">%d in stock</string>
-    <string name="quantity_req">Quantity in Stock*</string>
-    <string name="save_action">Save</string>
-    <string name="sell">Sell</string>
-    <string name="yes">Yes</string>
-    <string name="required_fields">*required fields</string>
+    <string name="autor">Autor</string>
+    <string name="anio_in_anio">Año de Publicación</string>
+    <string name="in_anio">año %d</string>
+    <string name="anio_req">Año Publicación*</string>
+    <string name="save_action">Grabar</string>
+    <string name="sell">Vender</string>
+    <string name="yes">Si</string>
+    <string name="required_fields">*campos requeridos</string>
 </resources>

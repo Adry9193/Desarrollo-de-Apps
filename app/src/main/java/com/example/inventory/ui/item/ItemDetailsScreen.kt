@@ -133,14 +133,14 @@ private fun ItemDetailsBody(
         ItemDetails(
             item = itemDetailsUiState.itemDetails.toItem(), modifier = Modifier.fillMaxWidth()
         )
-        Button(
+        /*Button(
             onClick = onSellItem,
             modifier = Modifier.fillMaxWidth(),
             shape = MaterialTheme.shapes.small,
             enabled = !itemDetailsUiState.outOfStock
         ) {
             Text(stringResource(R.string.sell))
-        }
+        }*/
         OutlinedButton(
             onClick = { deleteConfirmationRequired = true },
             shape = MaterialTheme.shapes.small,
@@ -180,7 +180,7 @@ fun ItemDetails(
         ) {
             ItemDetailsRow(
                 labelResID = R.string.item,
-                itemDetail = item.name,
+                itemDetail = item.nombre,
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
@@ -189,8 +189,8 @@ fun ItemDetails(
                 )
             )
             ItemDetailsRow(
-                labelResID = R.string.quantity_in_stock,
-                itemDetail = item.quantity.toString(),
+                labelResID = R.string.anio_in_anio,
+                itemDetail = item.anio.toString(),
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
@@ -199,8 +199,8 @@ fun ItemDetails(
                 )
             )
             ItemDetailsRow(
-                labelResID = R.string.price,
-                itemDetail = item.formatedPrice(),
+                labelResID = R.string.autor,
+                itemDetail = item.autor, //formatedPrice(),
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
